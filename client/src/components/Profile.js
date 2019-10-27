@@ -13,8 +13,8 @@ import "./sh.css";
 const config = {
   bucketName: "imagesforuploadanddownload",
   region: "us-west-1",
-  accessKeyId: "AKIAJPQOJWFVPS6II5WA",
-  secretAccessKey: "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"
+  accessKeyId: "AKIAJEZJVVMH3X4AAY5A",
+  secretAccessKey: "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"
 };
 
 class Profile extends Component {

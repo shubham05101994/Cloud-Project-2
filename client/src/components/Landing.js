@@ -16,7 +16,8 @@ class Landing extends Component {
         </div>
         <div className="jumbotron mt-4">
           <div className="col-sm-8 mx-auto">
-            <p>**NOTE:</p>
+            <p>**NOTE: Short Feature List:</p>
+            
             <p className="">1. User Login</p>
             <p className="">2. Admin Login</p>
             <p className="">3. Social login (Facebook)</p>
