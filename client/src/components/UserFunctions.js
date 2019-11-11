@@ -22,7 +22,8 @@ export const uploadfileuserinfo =  async fileuserinfo => {
         File_updated_time: fileuserinfo.File_updated_time,
         File_delete_flag: fileuserinfo.File_delete_flag,
         File_deleted_time: fileuserinfo.File_deleted_time,
-        File_Update_flag: fileuserinfo.File_Update_flag
+        File_Update_flag: fileuserinfo.File_Update_flag,
+        Country: fileuserinfo.Country_Name
       });
     return response.data;
   }
@@ -167,4 +168,103 @@ export const returnallfiles =  async emailid => {
      console.log(err);
      alert(err);
    }
+ };
+
+
+ export const dashboard =  () => {
+  return axios
+     .get("dashboard/")
+     .then(response => {
+       console.log('In dashboard Userfunctions.js', response);
+       return response;
+     })
+     .catch(err => {
+       console.log(err);
+       alert(err);
+     });
+  // console.log(response);
+ };
+
+ export const CountryWisedashboard =  () => {
+  return axios
+     .get("dashboard/Country")
+     .then(response => {
+       console.log('In CountryWisedashboard Userfunctions.js', response);
+       return response;
+     })
+     .catch(err => {
+       console.log(err);
+       alert(err);
+     });
+  // console.log(response);
+ };
+
+ export const UnitedStatesdashboard =  () => {
+  return axios
+     .get("dashboard/UnitedStatesCountry")
+     .then(response => {
+       console.log('In UnitedStatesCountry Userfunctions.js', response);
+       return response;
+     })
+     .catch(err => {
+       console.log(err);
+       alert(err);
+     });
+  // console.log(response);
+ };
+
+ export const Indiadashboard =  () => {
+  return axios
+     .get("dashboard/IndiaCountry")
+     .then(response => {
+       console.log('In Indiadashboard Userfunctions.js', response);
+       return response;
+     })
+     .catch(err => {
+       console.log(err);
+       alert(err);
+     });
+  // console.log(response);
+ };
+
+ export const Japandashboard =  () => {
+  return axios
+     .get("dashboard/JapanCountry")
+     .then(response => {
+       console.log('In Japandashboard Userfunctions.js', response);
+       return response;
+     })
+     .catch(err => {
+       console.log(err);
+       alert(err);
+     });
+  // console.log(response);
+ };
+ 
+ export const Chinadashboard =  () => {
+  return axios
+     .get("dashboard/ChinaCountry")
+     .then(response => {
+       console.log('In Chinadashboard Userfunctions.js', response);
+       return response;
+     })
+     .catch(err => {
+       console.log(err);
+       alert(err);
+     });
+  // console.log(response);
+ };
+
+ export const Singaporedashboard =  () => {
+  return axios
+     .get("dashboard/SingaporeCountry")
+     .then(response => {
+       console.log('In Singaporedashboard Userfunctions.js', response);
+       return response;
+     })
+     .catch(err => {
+       console.log(err);
+       alert(err);
+     });
+  // console.log(response);
  };

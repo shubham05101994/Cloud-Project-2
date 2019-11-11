@@ -37,6 +37,14 @@ module.exports = db.sequelize.define(
     },
     File_Update_flag: {
       type: Sequelize.INTEGER
+    },
+    allcount: {
+      type: Sequelize.INTEGER,
+      defaultValue: 1
+    },
+    Country: {
+      type: Sequelize.STRING,
+     
     }
   },
   {

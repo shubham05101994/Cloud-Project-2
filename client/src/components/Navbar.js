@@ -50,6 +50,11 @@ class Landing extends Component {
             Logout
           </a>
         </li>
+        <li className="nav-item">
+          <Link to="/dashboard" className="nav-link">
+            Dashboard
+          </Link>
+        </li>
       </ul>
     );
 

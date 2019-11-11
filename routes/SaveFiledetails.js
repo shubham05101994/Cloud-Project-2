@@ -14,7 +14,8 @@ userfiledetials.post("/", (req, res) => {
         File_updated_time: today.toDateString()+" "+today.getHours() +":"+today.getMinutes()+":" +today.getSeconds(),
         File_delete_flag:req.body.File_delete_flag,
         File_deleted_time:today.toDateString()+" "+today.getHours() +":"+today.getMinutes()+":" +today.getSeconds(),
-        File_Update_flag:req.body.File_Update_flag
+        File_Update_flag:req.body.File_Update_flag,
+        Country:req.body.Country
     };
   
     FileUserDetails.create(userfileData)

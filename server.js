@@ -16,11 +16,14 @@ var Users = require("./routes/Users");
 var Listbucket = require("./routes/Listbucket");
 var FileinfoSave = require("./routes/SaveFiledetails");
 var Returnfiles = require("./routes/Returnfiles");
+var dynamodb = require("./routes/Dynamo");
+var Dashboard = require("./routes/Dashboardgraph");
 app.use("/users", Users);
 app.use("/bucket", Listbucket);
 app.use("/FileinfoSave", FileinfoSave);
 app.use("/returnfiles",Returnfiles);
-
+app.use("/dynamo",dynamodb);
+app.use("/dashboard",Dashboard);
 
 app.listen(port, function() {
   console.log("Server is running on port: " + port);

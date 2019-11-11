@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import jwt_decode from "jwt-decode";
+import axios from "axios";
 import { uploadfileuserinfo } from "./UserFunctions";
 import { returnallfiles } from "./UserFunctions";
 import { deletefile } from "./UserFunctions";
@@ -9,6 +10,7 @@ import { updatedatabase } from "./UserFunctions";
 import ReactS3 from "react-s3";
 import {Modal,ModalHeader,ModalBody,ModalFooter} from 'reactstrap';
 import "./sh.css";
+import AudioPlayer from "react-h5-audio-player";
 
 const config = {
   bucketName: "imagesforuploadanddownload",
@@ -29,7 +31,9 @@ class Profile extends Component {
       errors: {},
       allretuenfiles: [],
       modalIsOpen : false,
-      updated_file_id: ""
+      updated_file_id: "",
+      countryName: '',
+        countryCode: ''
     };
     //this.onChange = this.onChange.bind(this);
     //this.onClick = this.onClick.bind(this);
@@ -52,6 +56,16 @@ toggelModal=(event) =>{
     let email = '';
     let first_name = '';
     let last_name = '';
+    axios.get('https://ipapi.co/json/').then((response) => {
+      console.log('Country ',response);
+        let data = response.data;
+        this.setState({
+            countryName: data.country_name,
+            countryCode: data.country_calling_code
+        });
+    }).catch((error) => {
+        console.log(error);
+    });
     if(localStorage.logintype == 'Facebook'){
       
      email = localStorage.facebookresponeemail;
@@ -88,12 +102,15 @@ toggelModal=(event) =>{
     this.setState({
       selectedFile: event.target.files[0]
     });
-    //console.log(this.state.selectedFile);
+    console.log(this.state.selectedFile);
   };
   onClick = e => {
-   // console.log('please check file info ',this.state.selectedFile.size);
+    console.log('please check file info ',this.state.selectedFile);
     let size=this.state.selectedFile.size;
-    if(size<10485760){
+    let filetype=this.state.selectedFile.type;
+    if(size<10485760)
+    {
+      if(filetype=='audio/mp3'){
       ReactS3.uploadFile(this.state.selectedFile, config)
       .then(data => {
         console.log(data);
@@ -107,7 +124,8 @@ toggelModal=(event) =>{
           File_updated_time: d.toUTCString(),
           File_delete_flag: 1,  
           File_deleted_time: d.toUTCString(),
-          File_Update_flag: 1
+          File_Update_flag: 1,
+          Country_Name: this.state.countryName
         };
         console.log(savefileinfo);
        console.log(e.target);
@@ -128,6 +146,10 @@ toggelModal=(event) =>{
       .catch(err => {
         alert(err);
       });
+    }
+      else{
+        alert("Please upload file audio file");
+      }
     }
     else{
       alert("Please upload file less than 10MB");
