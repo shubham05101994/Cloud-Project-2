@@ -7,6 +7,7 @@ import { Indiadashboard } from "./UserFunctions";
 import { Japandashboard } from "./UserFunctions";
 import { Chinadashboard } from "./UserFunctions";
 import { Singaporedashboard } from "./UserFunctions";
+import './sh.css';
 class Dashboard extends Component {
     constructor() {
         super();
@@ -165,7 +166,7 @@ class Dashboard extends Component {
             labels: this.state.filename,
             datasets:[
               {
-                label:'Audio Song',
+               // label:this.state.filename[0],
                 data:this.state.countBar,
                 backgroundColor:[
                   'rgba(255, 99, 132, 0.6)',
@@ -347,7 +348,7 @@ class Dashboard extends Component {
         return ( 
             <div>
             
-            <div className="chart">
+            <div className="margin_pie">
         <Bar
           data={this.state.chartData}
           width={500}
@@ -355,11 +356,11 @@ class Dashboard extends Component {
           options={{
             title:{
               display:true,
-              text:'Top Most 5 Trending Songs',
+              text:'Top Most 5 Trending Songs in the World',
               fontSize:25
             },
             legend:{
-              display:true,
+              display:false,
               position:'right'
             },
             scales: {
@@ -373,7 +374,7 @@ class Dashboard extends Component {
         />
 </div>
         
-<div className="chart">
+<div className="margin_pie">
         <Doughnut
           data={this.state.CountrywisepieChart}
           width={500}
@@ -388,12 +389,12 @@ class Dashboard extends Component {
             },
             legend:{
               display:true,
-              position:'right'
+              position:'top'
             }
           }}
         />
       </div>
-      <div className="chart">
+      <div className="margin_pie">
 
       <Pie
           data={this.state.UnitedStatesPieChart}
@@ -409,13 +410,13 @@ class Dashboard extends Component {
             },
             legend:{
               display:true,
-              position:'right'
+              position:'top'
             }
           }}
         />
       </div>
 
-      <div className="chart">
+      <div className="margin_pie">
 
       <Pie
           data={this.state.IndiaPieChart}
@@ -427,12 +428,12 @@ class Dashboard extends Component {
             },
             legend:{
               display:true,
-              position:'right'
+              position:'top'
             }
           }}
         />
       </div>
-      <div className="chart">
+      <div className="margin_pie">
         <Pie
             data={this.state.JapanPieChart}
             options={{
@@ -443,12 +444,12 @@ class Dashboard extends Component {
               },
               legend:{
                 display:true,
-                position:'right'
+                position:'top'
               }
             }}
           />
       </div>
-      <div className="chart">
+      <div className="margin_pie">
         <Pie
             data={this.state.ChinaPieChart}
             options={{
@@ -459,14 +460,15 @@ class Dashboard extends Component {
               },
               legend:{
                 display:true,
-                position:'right'
+                position:'top'
               }
             }}
           />
       </div>
-      <div className="chart">
+      <div className="margin_pie">
         <Pie
             data={this.state.SingaporePieChart}
+            
             options={{
               title:{
                 display:true,
@@ -475,7 +477,7 @@ class Dashboard extends Component {
               },
               legend:{
                 display:true,
-                position:'right'
+                position:'top'
               }
             }}
           />

@@ -35,6 +35,16 @@ class Landing extends Component {
             Admin
           </Link>
         </li>
+        <li className="nav-item">
+          <Link to="/chatbot" className="nav-link">
+            Chatbot
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/dashboard" className="nav-link">
+            Dashboard
+          </Link>
+        </li>
       </ul>
     );
 
@@ -50,11 +60,7 @@ class Landing extends Component {
             Logout
           </a>
         </li>
-        <li className="nav-item">
-          <Link to="/dashboard" className="nav-link">
-            Dashboard
-          </Link>
-        </li>
+               
       </ul>
     );
 

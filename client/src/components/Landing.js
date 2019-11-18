@@ -10,7 +10,7 @@ class Landing extends Component {
             <h4 className="text-center">WELCOME TO</h4>
             <div>
             
-            <h1 className="text-center name_app"><img src="flash.png" alt="Smiley face" height="42" width="42"></img>Flash File Uploader</h1>
+            <h1 className="text-center name_app"><img src="flash.png" alt="Smiley face" height="42" width="42"></img>Trending Music Dashboard</h1>
             </div>
           </div>
         </div>

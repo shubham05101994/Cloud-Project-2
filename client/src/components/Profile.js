@@ -284,28 +284,24 @@ toggelModal=(event) =>{
         </div>
         <div className="col-md-12">
         <div className="disply_p adding_pad">
-              <div className="col-md-3">
+              <div className="col-md-4">
                 <b>File Name</b>
               </div>
-              <div className="col-md-2">
+              <div className="col-md-3">
                 <b>
                   Download
                 </b>
               </div>
+              
               <div className="col-md-2">
-                <b >Update</b>
-              </div>
-              <div className="col-md-1">
                 <b>
                   Delete
                 </b>
               </div>
-              <div className="col-md-2 padding_upload">
+              <div className="col-md-3 padding_upload">
                 <b>Upload File Time</b>
               </div>
-              <div className="col-md-2 padding_upload">
-                <b>Updated File Time</b>
-              </div>
+             
             </div>
 
 
@@ -315,10 +311,10 @@ toggelModal=(event) =>{
           {this.state.allretuenfiles.map(response => (
             
             <div id={response.File_description} className="disply_p" key={response.idUser_file_details}>
-              <div className="col-md-3 break">
+              <div className="col-md-4 break">
                 <b>{response.File_description}</b>
               </div>
-              <div className="col-md-2">
+              <div className="col-md-3">
                 <a
                   className="btn btn-primary"
                   href={response.Download_link}
@@ -328,10 +324,8 @@ toggelModal=(event) =>{
                   Download
                 </a>
               </div>
+              
               <div className="col-md-2">
-                <a id={response.idUser_file_details} className="btn btn-info color_text" onClick={this.toggelModal}>Update</a>
-              </div>
-              <div className="col-md-1">
                 <a id={response.idUser_file_details}
                   className="btn btn-danger color_text"
                   onClick={this.ondeleteclick}
@@ -339,13 +333,11 @@ toggelModal=(event) =>{
                   Delete
                 </a>
               </div>
-              <div className="col-md-2 padding_upload break">
+              <div className="col-md-3 padding_upload break">
                 <b>{response.File_upload_time}</b>
               </div>
               
-              <div className="col-md-2 padding_upload break">
-                <b>{response.File_updated_time}</b>
-              </div>
+              
             </div>
           ))}
         </div>
