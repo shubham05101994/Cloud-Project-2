@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.540.0",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^3.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "file-system": "^2.2.2",
@@ -18,6 +18,7 @@
     "jwt-decode": "^2.2.0",
     "mysql": "^2.17.1",
     "mysql2": "^1.7.0",
+    "python": "0.0.4",
     "react-download-link": "^2.2.0",
     "sequelize": "^5.19.1"
   },
