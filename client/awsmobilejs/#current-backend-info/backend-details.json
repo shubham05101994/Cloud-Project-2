@@ -1,0 +1,210 @@
+{
+	"name": "react-chatbot-2019-11-09-15-17-10",
+	"projectId": "e6646ae5-21b1-4ba1-97ef-7163578c867e",
+	"region": "us-east-1",
+	"state": "NORMAL",
+	"createdDate": "2019-11-09T23:17:09.687Z",
+	"lastUpdatedDate": "2019-11-10T08:30:07.127Z",
+	"consoleUrl": "https://console.aws.amazon.com/mobilehub/home#/e6646ae5-21b1-4ba1-97ef-7163578c867e/build",
+	"resources": [
+		{
+			"type": "AWS::IAM::Role",
+			"name": "AWSServiceRoleForLexBots",
+			"arn": "arn:aws:iam::933608021839:role/aws-service-role/lex.amazonaws.com/AWSServiceRoleForLexBots",
+			"feature": "bots",
+			"attributes": {
+				"bots-role-key": "bots-execution-role",
+				"lastUpdateRequestID": "3a69dcf5-546c-4960-8c24-f20b82f82d89"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "reactchatbot_bots_MOBILEHUB_1519872555",
+			"arn": null,
+			"feature": "bots",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "3a69dcf5-546c-4960-8c24-f20b82f82d89",
+				"role": "reactchatbot_auth_MOBILEHUB_1519872555"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "reactchatbot_bots_MOBILEHUB_1519872555",
+			"arn": null,
+			"feature": "bots",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "3a69dcf5-546c-4960-8c24-f20b82f82d89",
+				"role": "reactchatbot_unauth_MOBILEHUB_1519872555"
+			}
+		},
+		{
+			"type": "AWS::Lex::Bot",
+			"name": "PlayMusic",
+			"arn": "PlayMusic",
+			"feature": "bots",
+			"attributes": {
+				"description": "",
+				"lastUpdateRequestID": "3a69dcf5-546c-4960-8c24-f20b82f82d89",
+				"originalName": "PlayMusic",
+				"region": "us-east-1",
+				"template": "bot-import"
+			}
+		},
+		{
+			"type": "AWS::Cognito::IdentityPool",
+			"name": "reactchatbot_MOBILEHUB_1519872555",
+			"arn": "us-east-1:dafa168d-1d9e-4fd2-acc9-a159764f9257",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "359393c2-9b7d-402e-93b1-769f0ee146c7",
+				"poolid": "us-east-1:dafa168d-1d9e-4fd2-acc9-a159764f9257",
+				"roleARNs": "arn:aws:iam::933608021839:role/reactchatbot_auth_MOBILEHUB_1519872555,arn:aws:iam::933608021839:role/reactchatbot_unauth_MOBILEHUB_1519872555"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "reactchatbot_smsverification_MOBILEHUB_1519872555",
+			"arn": "arn:aws:iam::933608021839:role/service-role/reactchatbot_smsverification_MOBILEHUB_1519872555",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "359393c2-9b7d-402e-93b1-769f0ee146c7",
+				"user-pools-role-key": "user-pools-execution-role"
+			}
+		},
+		{
+			"type": "AWS::Cognito::UserPool",
+			"name": "reactchatbot_userpool_MOBILEHUB_1519872555",
+			"arn": "us-east-1_HrOeOa4P7",
+			"feature": "user-signin",
+			"attributes": {
+				"alias-attributes": "[\"email\",\"phone_number\"]",
+				"lastUpdateRequestID": "359393c2-9b7d-402e-93b1-769f0ee146c7",
+				"mfa-configuration": "ON",
+				"password-policy": "{\"minimumLength\":8,\"requireUppercase\":true,\"requireLowercase\":true,\"requireNumbers\":true,\"requireSymbols\":true,\"temporaryPasswordValidityDays\":7}",
+				"region": "us-east-1",
+				"user-pools-client-id": "67mrephubl758lptapvkse5kcr",
+				"user-pools-client-secret": "3bf30gqotol07ucs3bquv62j9ib9sddu3e395gde1glkf39mcol",
+				"user-pools-id": "us-east-1_HrOeOa4P7",
+				"user-pools-web-client-id": "6luisfrbeqnlfp4serio1rhe7a"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "reactchatbot_auth_MOBILEHUB_1519872555",
+			"arn": "arn:aws:iam::933608021839:role/reactchatbot_auth_MOBILEHUB_1519872555",
+			"feature": "user-signin",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "359393c2-9b7d-402e-93b1-769f0ee146c7"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "reactchatbot_unauth_MOBILEHUB_1519872555",
+			"arn": "arn:aws:iam::933608021839:role/reactchatbot_unauth_MOBILEHUB_1519872555",
+			"feature": "user-signin",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "3cc11f4d-4412-4247-8fee-3cb9db04a644"
+			}
+		},
+		{
+			"type": "AWS::Pinpoint::AnalyticsApplication",
+			"name": "reactchatbot20191109151710_MobileHub",
+			"arn": "ff6a3c1cd2254c82a23a9d2f9c254d86",
+			"feature": "analytics",
+			"attributes": {
+				"lastUpdateRequestID": "3cc11f4d-4412-4247-8fee-3cb9db04a644"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "reactchatbot_mobileanalytics_MOBILEHUB_1519872555",
+			"arn": null,
+			"feature": "analytics",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "3a69dcf5-546c-4960-8c24-f20b82f82d89",
+				"role": "reactchatbot_auth_MOBILEHUB_1519872555"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "reactchatbot_mobileanalytics_MOBILEHUB_1519872555",
+			"arn": null,
+			"feature": "analytics",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "3a69dcf5-546c-4960-8c24-f20b82f82d89",
+				"role": "reactchatbot_unauth_MOBILEHUB_1519872555"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "reactchatbot-hosting-mobilehub-1519872555",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"lastUpdateRequestID": "3cc11f4d-4412-4247-8fee-3cb9db04a644",
+				"region": "us-east-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/reactchatbot-hosting-mobilehub-1519872555",
+				"s3-bucket-website-url": "https://s3.amazonaws.com/reactchatbot-hosting-mobilehub-1519872555"
+			}
+		},
+		{
+			"type": "AWS::CloudFront::Distribution",
+			"name": "d3ukw425uaqw3w.cloudfront.net",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"id": "E2AEBOITZC94YT",
+				"lastUpdateRequestID": "3cc11f4d-4412-4247-8fee-3cb9db04a644"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "reactchatbot_hosting_MOBILEHUB_1519872555",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "3a69dcf5-546c-4960-8c24-f20b82f82d89",
+				"role": "reactchatbot_auth_MOBILEHUB_1519872555"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "reactchatbot_hosting_MOBILEHUB_1519872555",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "3a69dcf5-546c-4960-8c24-f20b82f82d89",
+				"role": "reactchatbot_unauth_MOBILEHUB_1519872555"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "reactchatbot-deployments-mobilehub-1519872555",
+			"arn": null,
+			"feature": "common",
+			"attributes": {
+				"region": "us-east-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/reactchatbot-deployments-mobilehub-1519872555"
+			}
+		},
+		{
+			"type": "AWS::CloudFormation::Stack",
+			"name": "Development",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"primary": "true",
+				"region": "us-east-1",
+				"stateSummary": "NOT_YET_DEPLOYED"
+			}
+		}
+	]
+}

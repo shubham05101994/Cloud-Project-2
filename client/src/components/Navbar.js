@@ -36,23 +36,32 @@ class Landing extends Component {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/chatbot" className="nav-link">
-            Chatbot
-          </Link>
-        </li>
-        <li className="nav-item">
           <Link to="/dashboard" className="nav-link">
             Dashboard
           </Link>
         </li>
       </ul>
     );
-
+    const userdashboard =(
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <Link to="/userdashboard" className="nav-link">
+            UserDashboard
+          </Link>
+        </li>               
+      </ul>
+    );
     const userLink = (
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link to="/profile" className="nav-link">
             User
+          </Link>
+        </li>
+        
+        <li className="nav-item">
+          <Link to="/chatbot" className="nav-link">
+            Chatbot
           </Link>
         </li>
         <li className="nav-item">
@@ -90,7 +99,9 @@ class Landing extends Component {
             </li>
           </ul>
           {localStorage.usertoken || localStorage.facebookresponeemail ? userLink : loginRegLink}
+          {localStorage.usertoken || localStorage.facebookresponeemail ? userdashboard : ""}
           {localStorage.email=="admin@cloud.com" ? adminLink : ""}
+          
         </div>
       </nav>
     );

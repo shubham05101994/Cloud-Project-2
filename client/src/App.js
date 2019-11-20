@@ -9,6 +9,7 @@ import Profile from "./components/Profile";
 import Admin from "./components/Admin";
 import Dashboard from "./components/Dashboard";
 import Chatbot from "./components/ChatBot";
+import UserDashboard from "./components/UserDashboard";
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/admin" component={Admin}/>
             <Route exact path="/dashboard" component={Dashboard}/>
             <Route exact path="/chatbot" component={Chatbot}/>
+            <Route exact path="/userdashboard" component={UserDashboard}/>
           </div>
         </div>
       </Router>
