@@ -323,38 +323,6 @@ class Profile extends Component {
             </div>
           ))}
 
-<div
-              class="card1 col-md-3"
-              style={{
-                
-                border: "1px solid brown",
-                boxShadow: "1px 1px 10px 2px",
-                marginRight:'3%',
-                marginBottom:'3%'
-              }}
-            >
-              <div class="card-body">
-                <h5 class="card-title">{response.Specialization}</h5>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  Doctor Name : {response.DoctorName}
-                </li>
-                <li class="list-group-item">Address :{response.Address}</li>
-                <li class="list-group-item">Contact :{response.Contact}</li>
-                <li class="list-group-item">
-                  Doctor Gender :{response.Gender}
-                </li>
-                <li class="list-group-item">
-                  Year of Experience :{response.YearOfExperience}
-                </li>
-                <li class="list-group-item">
-                  Appointment Date :{response.AppointmentDate}
-                </li>
-                <li class="list-group-item">Fee :{response.Fee}</li>
-                <li class="list-group-item">Concent :{response.Concent}</li>
-              </ul>
-            </div>
 
         </div>
       </div>
