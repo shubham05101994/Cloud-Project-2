@@ -56,6 +56,7 @@ class Login extends Component {
                   placeholder="Enter email"
                   value={this.state.email}
                   onChange={this.onChange}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -67,6 +68,7 @@ class Login extends Component {
                   placeholder="Password"
                   value={this.state.password}
                   onChange={this.onChange}
+                  required
                 />
               </div>
               <button

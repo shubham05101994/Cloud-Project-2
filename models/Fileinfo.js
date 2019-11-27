@@ -2,7 +2,7 @@ const Sequelize = require("sequelize");
 const db = require("../database/db.js");
 
 module.exports = db.sequelize.define(
-  "User_file_details",
+  "user_file_details",
   {
     idUser_file_details: {
       type: Sequelize.INTEGER,
