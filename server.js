@@ -1,7 +1,7 @@
 var express = require("express");
 var cors = require("cors");
 var path = require("path");
-//var bodyParser = require('body-parser')
+//var bodyParser = require('body-parser') 
 var app = express();
 var port = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, 'client', 'build')));
@@ -25,7 +25,10 @@ app.use("/FileinfoSave", FileinfoSave);
 app.use("/returnfiles",Returnfiles);
 app.use("/dynamo",dynamodb);
 app.use("/dashboard",Dashboard);
-
+app.get('/ss', function (req, res) {
+  res.send('hello world'); 
+ });
 app.listen(port, function() {
   console.log("Server is running on port: " + port);
 });
+module.exports = app;

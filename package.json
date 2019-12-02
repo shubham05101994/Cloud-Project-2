@@ -23,6 +23,8 @@
     "sequelize": "^5.19.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.3"
+    "nodemon": "^1.19.3",
+    "mocha": "1.20.1",
+    "supertest": "0.13.0"
   }
 }
