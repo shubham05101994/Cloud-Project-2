@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ChatBot } from "aws-amplify-react";
+import { ChatBot,AmplifyTheme } from "aws-amplify-react";
 class Chatbot extends Component {
   constructor(props) {
     super(props);
@@ -7,6 +7,13 @@ class Chatbot extends Component {
   }
 
   render() {
+    const myTheme = {
+      ...AmplifyTheme,
+      sectionHeader: {
+        ...AmplifyTheme.sectionHeader,
+        backgroundColor: 'brown'
+      }
+    };
     let handleComplete = (err, confirmation) => {
       if (err) {
         alert("Bot conversation failed");
@@ -16,9 +23,10 @@ class Chatbot extends Component {
       return "Thats the list";
     };
     return (
-      <div>
+      <div style={{margin:'5%'}}>
         <ChatBot
           title="PlayMusic"
+          theme={myTheme}
           botName="PlayMusic"
           welcomeMessage="Welcome to Automated chatbot"
           onComplete={handleComplete()}
