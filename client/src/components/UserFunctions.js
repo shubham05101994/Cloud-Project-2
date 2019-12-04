@@ -268,3 +268,17 @@ export const returnallfiles =  async emailid => {
      });
   // console.log(response);
  };
+
+ export const Iotdata =  () => {
+  return axios
+     .get("dashboard/iot")
+     .then(response => {
+       console.log('In Chinadashboard Userfunctions.js', response);
+       return response;
+     })
+     .catch(err => {
+       console.log(err);
+       alert(err);
+     });
+  // console.log(response);
+ };

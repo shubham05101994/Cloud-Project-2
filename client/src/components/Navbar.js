@@ -40,6 +40,11 @@ class Landing extends Component {
             Dashboard
           </Link>
         </li>
+        <li className="nav-item">
+          <Link to="/iot" className="nav-link">
+            IOT
+          </Link>
+        </li>
       </ul>
     );
     const userdashboard =(

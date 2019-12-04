@@ -66,4 +66,14 @@ dashboard.get("/Country", (req, res) => {
                         //console.log(results);
                 })
             });
+
+            dashboard.get("/iot", (req, res) => {
+                db.sequelize
+                .query("select * from user_login.Iots")
+                    .then(([results]) => {
+                        res.send(results);
+                                //console.log(results);
+                        })
+                    });
+
 module.exports = dashboard;

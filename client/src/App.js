@@ -10,6 +10,7 @@ import Admin from "./components/Admin";
 import Dashboard from "./components/Dashboard";
 import Chatbot from "./components/ChatBot";
 import UserDashboard from "./components/UserDashboard";
+import Iot from "./components/Iot";
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
             <Route exact path="/dashboard" component={Dashboard}/>
             <Route exact path="/chatbot" component={Chatbot}/>
             <Route exact path="/userdashboard" component={UserDashboard}/>
+            <Route exact path="/iot" component={Iot}/>
           </div>
         </div>
       </Router>
