@@ -21,11 +21,12 @@ class Landing extends Component {
             <p className="">1. User Login</p>
             <p className="">2. Admin Login</p>
             <p className="">3. Social login (Facebook)</p>
-            <p className="">4. Application performs file Uploading.</p>
-            <p className="">5. Application performs file Downloading.</p>
-            <p className="">6. Application performs file Deleting.</p>
-            <p className="">7. Application performs file Updating.</p>
-            <p className="">8. Application allows to upload file only Less than 10MB</p>
+            <p className="">4. Application provides feature for Uploading Songs .</p>
+            <p className="">5. Application provides feature for Deleting Songs.</p>
+            <p className="">6. Application dashboard provides details of top Trending Songs.</p>
+            <p className="">7. Application dashboard provides details of Country wise Trending Songs.</p>
+            <p className="">8. Application implements Amazon Chatbot</p>
+            <p className="">8. Application implements IOT</p>
            
 
 
