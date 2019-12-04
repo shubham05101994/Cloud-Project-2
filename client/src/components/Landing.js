@@ -26,7 +26,8 @@ class Landing extends Component {
             <p className="">6. Application dashboard provides details of top Trending Songs.</p>
             <p className="">7. Application dashboard provides details of Country wise Trending Songs.</p>
             <p className="">8. Application implements Amazon Chatbot</p>
-            <p className="">8. Application implements IOT</p>
+            <p className="">9. Application implements IOT</p>
+            <p className="">10.Application provides Admin Panel</p>
            
 
 
