@@ -33,7 +33,7 @@ class Iot extends Component {
                       class="card1 col-md-3"
                       style={{
                         
-                        border: "1px solid brown",
+                        border: "1px solid #455a64",
                         boxShadow: "1px 1px 10px 2px",
                         marginRight:'3%',
                         marginBottom:'3%',

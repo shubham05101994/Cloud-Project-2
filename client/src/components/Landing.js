@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-
+import Footer from "./Footer";
 class Landing extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="">
         <div className="jumbotron color_back mt-4">
           <div className="col-sm-8 mx-auto">
           
@@ -14,7 +14,7 @@ class Landing extends Component {
             </div>
           </div>
         </div>
-        <div className="jumbotron mt-4">
+        <div className="jumbotron mt-4" style={{marginLeft:'16%',marginRight:'16%'}}>
           <div className="col-sm-8 mx-auto">
             <p>**NOTE: Short Feature List:</p>
             
@@ -34,6 +34,7 @@ class Landing extends Component {
 
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

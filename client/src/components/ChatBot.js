@@ -11,7 +11,7 @@ class Chatbot extends Component {
       ...AmplifyTheme,
       sectionHeader: {
         ...AmplifyTheme.sectionHeader,
-        backgroundColor: 'brown'
+        backgroundColor: '#455a64'
       }
     };
     let handleComplete = (err, confirmation) => {
@@ -19,7 +19,7 @@ class Chatbot extends Component {
         alert("Bot conversation failed");
         return;
       }
-      alert("Welcome");
+      alert("Welcome to ChatBot");
       return "Thats the list";
     };
     return (
