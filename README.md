@@ -26,4 +26,25 @@ Project Introduction :
 
 ![17 IOT](https://user-images.githubusercontent.com/54881803/70395350-99987500-19b2-11ea-9536-9f9d5c0abbac.PNG)
 
+Pre-requisites Set Up
+- S3 bucket
+- AWS config
+- AWS LEX
+- S3 Replication
+- AWS IoT
+- CloudFront
+- Visual Studio Code
+- React JS
+- Node installed.
+- AWS RDS/MYSQL localhost
+- ChartJS
+- MySQL workbench
+- Microphone for chatbot
+- Lambda functions,etc.
 
+
+How to set up and run project locally?
+- git clone complete repository
+- enter command node server in terminal
+- go inside client folder enter command npm start
+- add your database credentials in db.js file.
